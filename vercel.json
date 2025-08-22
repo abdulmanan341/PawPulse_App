@@ -1,27 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "pages/index.html",
-      "use": "@vercel/static"
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/pages/index.html" }
   ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/pages/index.html"
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "/css/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "dest": "/js/$1"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    }
-  ]
+  "static": {
+    "css": "css",
+    "js": "js",
+    "assest": "assest"
+  }
 }
